@@ -1,0 +1,19 @@
+version: '3.9'
+
+
+services:
+
+  mongo:
+    container_name: authorization_service_mongo_db
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      DATABASE_NAME: session_db
+      HOST: localhost
+      PORT: 27017
+    ports:
+      - '27017:27017'
+
+

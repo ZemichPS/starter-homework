@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: auth-microservice
+
+  data:
+    mongodb:
+      host: ${HOST:localhost}
+      port: ${PORT:27017}
+      username: ${MONGO_INITDB_ROOT_USERNAME:root}
+      password: ${MONGO_INITDB_ROOT_PASSWORD:example}
+      database: ${DATABASE_NAME:session_db}
+      authentication-database: admin
+
+server:
+  port: 8081
+
+session:
+  valid_in_hours: 24
+
